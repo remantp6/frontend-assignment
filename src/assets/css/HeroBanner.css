@@ -1,0 +1,26 @@
+.banner-content .hero-banner img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  
+  .banner-content {
+    position: relative;
+  }
+  
+  .banner-caption {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+  }
+  
+.banner-caption h1 {
+    color: rgb(155, 69, 236);
+  }
+  .banner-caption h2 {
+    color: rgb(244, 66, 96);
+    text-transform: uppercase;
+  }
+
+  

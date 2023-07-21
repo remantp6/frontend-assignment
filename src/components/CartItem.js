@@ -1,5 +1,6 @@
 import React from "react";
 import "../assets/css/CartItem.css";
+import emptyCart from "../assets/images/emptyCart.png";
 import { Col, Container, Row } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import { removeToCart } from "../redux/feature/CartSlice";
@@ -9,7 +10,6 @@ const CartItem = () => {
   const dispatch = useDispatch();
   const items = useSelector((state) => state.cart);
   const handleRemoveItem = (productId) => {
-   
     dispatch(removeToCart(productId));
   };
   return (
@@ -17,8 +17,9 @@ const CartItem = () => {
       <div className="cart-item-section py-3">
         <Container>
           {items.length === 0 ? (
-            <div className="empty-cart-message">
-              <p>No Products in the Cart</p>
+            <div className="empty-cart-message text-center py-5">
+             <img src = {emptyCart} alt="cart-img" style={{width: 700, height: "auto"}}/>
+              <p className="fs-4">No Products in the Cart</p>
             </div>
           ) : (
             items.map((product) => (

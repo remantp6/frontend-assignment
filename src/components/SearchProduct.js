@@ -65,8 +65,8 @@ const SearchProduct = () => {
                     onClick={() => handleNavigate(product)}
                   >
                     <img src={product.image} alt="img" className="w-100" />
-                    <p className="mb-0 pt-2">{product.price}</p>
-                    <p className="mb-0">{product.category}</p>
+                    <p className="mb-0 fs-5 pt-2">$ {product.price}</p>
+                    <p className="mb-0 fs-5">{product.title}</p>
                   </div>
                 ))}
               </div>

@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import "../assets/css/SearchProduct.css";
+import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchProducts } from "../services/FetchApi";
 import { Container } from "react-bootstrap";
 
 const SearchProduct = () => {
+  const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const { data } = useQuery("products", fetchProducts);
   const [searchResults, setSearchResults] = useState([]);
 
   //handleSubmit function to handle the form submission
   const handleSubmit = (e) => {
+    
     //prevent default behavior of form submission
     e.preventDefault();
 
@@ -32,6 +35,12 @@ const SearchProduct = () => {
     }
   };
 
+  const handleNavigate = (product) => {
+
+    //navigate to product-details page
+    navigate(`/product-details/${product.id}`);
+  };
+
   return (
     <>
       <div className="search-list">
@@ -49,7 +58,12 @@ const SearchProduct = () => {
             <div className="search-results me-auto ms-auto mt-5">
               <div className="search-items-wrapper">
                 {searchResults.map((product) => (
-                  <div className="search-item" lg={3} key={product.id}>
+                  <div
+                    className="search-item"
+                    lg={3}
+                    key={product.id}
+                    onClick={() => handleNavigate(product)}
+                  >
                     <img src={product.image} alt="img" className="w-100" />
                     <p className="mb-0 pt-2">{product.price}</p>
                     <p className="mb-0">{product.category}</p>

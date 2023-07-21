@@ -1,9 +1,12 @@
 import React from 'react'
+import "../assets/css/Button.css"
 
-const Button = ({ label }) => {
+const Button = ({label}) => {
   return (
     <>
-      <Button>{label}</Button>
+    <div className='cart-button'>
+      <button>{label}</button>
+    </div>
     </>
   )
 }

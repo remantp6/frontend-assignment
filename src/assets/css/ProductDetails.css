@@ -1,0 +1,7 @@
+.product-details .product-content img{
+    width: 200px;
+    height: auto;
+}
+.product-content-article .mt-2, .my-2{
+    font-weight: 700;
+}

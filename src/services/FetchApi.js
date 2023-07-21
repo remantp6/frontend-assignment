@@ -11,15 +11,15 @@ const fetchProducts = async () => {
   }
 };
 
-// const fetchProductDetails = async (productId) => {
-//   try {
-//     const response = await axios.get(
-//       `https://fakestoreapi.com/products/${productId}`
-//     );
-//     return response.data;
-//   } catch (error) {
-//     throw new Error("Failed to fetch product details.");
-//   }
-// };
+const fetchProductById = async (productId) => {
+  try {
+    const response = await axios.get(
+      `https://fakestoreapi.com/products/${productId}`
+    );
+    return response.data;
+  } catch (error) {
+    throw new Error("Failed to fetch product details.");
+  }
+};
 
-export { fetchProducts };
+export { fetchProducts, fetchProductById };

@@ -1,0 +1,8 @@
+.snackbar p{
+    width: 152px; 
+    color: white;
+    align-items: center;
+    background-color: green;
+    padding: 10px 0px;
+    border-radius: 8px;
+}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../assets/css/SearchProduct.css";
+import searchBanner from "../assets/images/searchBanner.jpg";
 import { useNavigate } from "react-router-dom";
 import { useQuery } from "react-query";
 import { fetchProducts } from "../services/FetchApi";
@@ -44,6 +45,7 @@ const SearchProduct = () => {
   return (
     <>
       <div className="search-list">
+      <img src={searchBanner} alt="search-img"/>
         <Container>
           <form onSubmit={handleSubmit} className="pt-5 ms-auto me-auto">
             <input

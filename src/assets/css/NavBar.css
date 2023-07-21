@@ -1,3 +1,7 @@
 .navbar a span{
      color: rgb(232, 52, 82);
 }
+.navbar .nav-link{
+  font-size: 20px;
+  font-weight: 400;
+}

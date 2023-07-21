@@ -1,11 +1,11 @@
 import React from 'react'
 import "../assets/css/Button.css"
 
-const Button = ({label}) => {
+const Button = ({ onClick, label}) => {
   return (
     <>
     <div className='cart-button'>
-      <button>{label}</button>
+      <button onClick={onClick}>{label}</button>
     </div>
     </>
   )

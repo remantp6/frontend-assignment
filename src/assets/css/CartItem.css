@@ -1,0 +1,8 @@
+.cart-item-section .cart-item img {
+    width: 200px;
+    height: auto;
+}
+.cart-item-article .mb-2, .rating{
+    font-weight: 700;
+}
+

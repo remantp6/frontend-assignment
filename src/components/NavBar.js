@@ -4,8 +4,10 @@ import { Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { NavLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
+  const items = useSelector((state) => state.cart);
   return (
     <>
       <Navbar expand="lg" className="bg-body-tertiary">
@@ -16,7 +18,7 @@ const NavBar = () => {
           <Nav className="ms-auto fs-5 my-2 my-lg-0">
             <Nav.Link as={NavLink} to="/">Home</Nav.Link>
             <Nav.Link className="px-4" as={NavLink} to="/search">Search</Nav.Link>
-            <Nav.Link as={NavLink} to="/cart/item"><i className="bi bi-cart-dash"></i>(<span>0</span>)</Nav.Link>
+            <Nav.Link as={NavLink} to="/cart/item"><i className="bi bi-cart-dash"></i>(<span>{items.length}</span>)</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -42,7 +42,10 @@ const ProductDetails = () => {
     <>
       <div className="product-details">
         <Container>
-          <h2 className="mb-0 py-4">Product Details</h2>
+        <div className="d-flex justify-content-between py-4">
+          <h2 className="mb-0">Product Details</h2>
+          {showSnackbar && <SnackBar message="Item added" />}
+          </div>
           {product && (
             <div className="product-content py-2">
               <Row>
@@ -66,7 +69,6 @@ const ProductDetails = () => {
             </div>
           )}
         </Container>
-        {showSnackbar && <SnackBar message="Item added" />}
       </div>
     </>
   );

@@ -17,14 +17,14 @@ const Footer = () => {
               <li className="mb-0">Shipping Policy</li>
             </Col>
             <Col sm={4} className="px-5">
-              <h6 className='pb-1'>Account</h6>
+              <h6 className='py-3 mb-0'>Account</h6>
               <li>Dashboard</li>
               <li>My Orders</li>
               <li>My Wishlist</li>
               <li className="mb-0">Account</li>
             </Col>
             <Col sm={4} className="px-5">
-              <h6 className='pb-1'>Categories</h6>
+              <h6 className='py-3 mb-0'>Categories</h6>
               <li> Clothing</li>
               <li>Bags</li>
               <li>Jewelery</li>

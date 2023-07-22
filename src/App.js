@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { store } from "./redux/Store";
 import { Provider } from "react-redux";
@@ -8,6 +8,9 @@ import Cart from "./pages/Cart";
 import ProductDetailsPage from "./pages/ProductDetailsPage";
 
 const App = () => {
+  useEffect(() => {
+    document.title = "OnlineStore";
+  }, []);
   return (
     <>
     <Provider store={store}>

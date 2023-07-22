@@ -8,9 +8,10 @@ import Button from "./Button";
 
 const CartItem = () => {
   const dispatch = useDispatch();
-  const items = useSelector((state) => state.cart);
+  const items = useSelector((state) => state.cart.orders);
+  console.log(items);
   const handleRemoveItem = (productId) => {
-    dispatch(removeToCart(productId));
+    dispatch(removeToCart({ index: productId }));
   };
   return (
     <>
@@ -18,11 +19,15 @@ const CartItem = () => {
         <Container>
           {items.length === 0 ? (
             <div className="empty-cart-message text-center py-5">
-             <img src = {emptyCart} alt="cart-img" style={{width: 700, height: "auto"}}/>
+              <img
+                src={emptyCart}
+                alt="cart-img"
+                style={{ width: 700, height: "auto" }}
+              />
               <p className="fs-4">No Products in the Cart</p>
             </div>
           ) : (
-            items.map((product) => (
+            items.map((product, index) => (
               <div className="cart-item py-4" key={product.id}>
                 <Row>
                   <Col md={3} className="pb-4">
@@ -38,7 +43,7 @@ const CartItem = () => {
                       </p>
                       <p className="mb-2">Price: {product.price}</p>
                       <Button
-                        onClick={() => handleRemoveItem(product.id)}
+                        onClick={() => handleRemoveItem(index)}
                         label="Remove From Cart"
                       />
                     </div>

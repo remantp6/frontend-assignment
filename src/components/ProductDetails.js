@@ -50,7 +50,7 @@ const ProductDetails = () => {
             <div className="product-content py-2">
               <Row>
                 <Col md={3}>
-                  <img src={product.image} alt="img" className=" my-5" />
+                  <img src={product.image} alt="img" className=" my-3" />
                 </Col>
                 <Col md={8}>
                   <div className="product-content-article mt-3">

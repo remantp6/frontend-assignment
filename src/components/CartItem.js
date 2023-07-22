@@ -25,7 +25,7 @@ const CartItem = () => {
             items.map((product) => (
               <div className="cart-item py-4" key={product.id}>
                 <Row>
-                  <Col md={3}>
+                  <Col md={3} className="pb-4">
                     <img src={product.image} alt="img" />
                   </Col>
                   <Col md={8}>
